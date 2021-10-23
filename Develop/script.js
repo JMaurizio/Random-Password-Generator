@@ -1,9 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
-var numberCharacters = "1234567890";
-var specialCharacters = " !#$%&')(*=,-./;:<>?@][\^}{_|~"
+var uppercaseCharacters ="";
+var lowercaseCharacters ="";
+var numberCharacters ="";
+var specialCharacters ="";
+var newPassword ="";
 
 
 // Write password to the #password input
@@ -18,34 +19,42 @@ function generatePassword() {
 
   var uppercase = window.confirm("Would you like to use uppercase characters?")
   if(uppercase) {
-    console.log("Uppercase")
+    uppercaseCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+    console.log(uppercaseCharacters)
   }
   else {
-    console.log("No")
+    uppercaseCharacters =""
+    console.log(uppercaseCharacters)
   };
 
   var lowercase = window.confirm("Would you like to use lowercase characters?")
   if(lowercase) {
-    console.log("Lowercase")
+    lowercaseCharacters =["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    console.log(lowercaseCharacters)
   }
   else {
-    console.log("No")
+    lowercaseCharacters =""
+    console.log(lowercaseCharacters)
   };
 
   var numbers = window.confirm("Would you like to use numbered characters?")
   if(numbers) {
-    console.log("Numbers")
+    numberCharacters =["1","2","3","4","5","6","7","8","9","0"]
+    console.log(numberCharacters)
   }
   else {
-    console.log("No")
+    numberCharacters =""
+    console.log(numberCharacters)
   };
 
   var special = window.confirm("Would you like to use special characters?")
   if(special) {
-    console.log("Special")
+    specialCharacters =["!","#","$","%","&","'",")","(","*","=",",","-",".","/",";",":","<",">","?","@","]","[","|","~"]
+    console.log(specialCharacters)
   }
   else {
-    console.log("No")
+    specialCharacters =""
+    console.log(specialCharacters)
   };
 
 };
