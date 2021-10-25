@@ -6,8 +6,6 @@ var numberCharacters ="";
 var specialCharacters ="";
 var characterLength ="";
 var newPassword ="";
-var characters =[uppercaseCharacters,lowercaseCharacters,numberCharacters,specialCharacters];
-
 
 // Write password to the #password input
 function generatePassword() {
@@ -58,19 +56,17 @@ function generatePassword() {
     specialCharacters =""
     console.log(specialCharacters)
   };
-  
+
+  var characters = uppercaseCharacters.concat(lowercaseCharacters,numberCharacters,specialCharacters);
   for (i=0; i < characterLength; i++) {
     characters[Math.floor(Math.random()*characters.length)];
 
   };
 
+  console.log(characterLength)
+  console.log(characters)
+
 };
-
-
-  for (i=0; i < characterLength; i++) {
-    uppercaseCharacters[Math.floor(Math.random()*uppercaseCharacters.length)];
-
-  };
 
 
 function writePassword() {
