@@ -5,9 +5,16 @@ var lowercaseCharacters ="";
 var numberCharacters ="";
 var specialCharacters ="";
 var characterLength ="";
-var newPassword ="";
+var characters ="";
+var pwd = "";
 
 // Write password to the #password input
+var newPassword = function(characterLength,characters) {
+  for (i = 0; i<characterLength; i++) {
+    pwd += characters.charAt(Math.floor(Math.random()*characterLength));
+  }
+};
+
 function generatePassword() {
   var characterLength = window.prompt("How many characters would you like the password to be?");
   if(characterLength>=8 && characterLength<=128){
@@ -57,14 +64,9 @@ function generatePassword() {
     console.log(specialCharacters)
   };
 
-  var characters = uppercaseCharacters.concat(lowercaseCharacters,numberCharacters,specialCharacters);
-  for (i=0; i < characterLength; i++) {
-    characters[Math.floor(Math.random()*characters.length)];
-
-  };
-
-  console.log(characterLength)
-  console.log(characters)
+  characters = uppercaseCharacters.concat(lowercaseCharacters,numberCharacters,specialCharacters);
+  
+  newPassword()
 
 };
 
