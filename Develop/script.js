@@ -4,7 +4,7 @@ var uppercaseCharacters ="";
 var lowercaseCharacters ="";
 var numberCharacters ="";
 var specialCharacters ="";
-var characterLength ="";
+var characterLength = 0;
 var characters ="";
 var newPassword ="";
 
@@ -31,41 +31,46 @@ function generatePassword() {
   var lowercase = window.confirm("Would you like to use lowercase characters?")
   if(lowercase) {
     lowercaseCharacters =["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-    console.log(lowercaseCharacters)
+    // console.log(lowercaseCharacters)
   }
   else {
     lowercaseCharacters =""
-    console.log(lowercaseCharacters)
+    // console.log(lowercaseCharacters)
   };
 
   var numbers = window.confirm("Would you like to use numbered characters?")
   if(numbers) {
     numberCharacters =["1","2","3","4","5","6","7","8","9","0"]
-    console.log(numberCharacters)
+    // console.log(numberCharacters)
   }
   else {
     numberCharacters =""
-    console.log(numberCharacters)
+    // console.log(numberCharacters)
   };
 
   var special = window.confirm("Would you like to use special characters?")
   if(special) {
     specialCharacters =["!","#","$","%","&","'",")","(","*","=",",","-",".","/",";",":","<",">","?","@","]","[","|","~"]
-    console.log(specialCharacters)
+    //console.log(specialCharacters)
   }
   else {
     specialCharacters =""
-    console.log(specialCharacters)
   };
 
   characters = uppercaseCharacters.concat(lowercaseCharacters,numberCharacters,specialCharacters);
-  
+  var newPassword1 = []
+
   for (i = 0; i<characterLength; i++) {
-    newPassword = Math.floor(Math.random()*characters.length);
+    var randomNumber = Math.floor(Math.random()*characters.length);
+    var randomValue = characters[randomNumber]
+    newPassword1.push(randomValue)
+    var newPassword = newPassword1.join("")
+    //console.log(characters)
   };
   return newPassword
-  
+
 };
+
 
 
 function writePassword() {
