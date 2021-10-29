@@ -21,37 +21,30 @@ function generatePassword() {
   var uppercase = window.confirm("Would you like to use uppercase characters?")
   if(uppercase) {
     uppercaseCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-    console.log(uppercaseCharacters)
   }
   else {
     uppercaseCharacters =""
-    console.log(uppercaseCharacters)
   };
 
   var lowercase = window.confirm("Would you like to use lowercase characters?")
   if(lowercase) {
     lowercaseCharacters =["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-    // console.log(lowercaseCharacters)
   }
   else {
     lowercaseCharacters =""
-    // console.log(lowercaseCharacters)
   };
 
   var numbers = window.confirm("Would you like to use numbered characters?")
   if(numbers) {
     numberCharacters =["1","2","3","4","5","6","7","8","9","0"]
-    // console.log(numberCharacters)
   }
   else {
     numberCharacters =""
-    // console.log(numberCharacters)
   };
 
   var special = window.confirm("Would you like to use special characters?")
   if(special) {
     specialCharacters =["!","#","$","%","&","'",")","(","*","=",",","-",".","/",";",":","<",">","?","@","]","[","|","~"]
-    //console.log(specialCharacters)
   }
   else {
     specialCharacters =""
@@ -65,7 +58,6 @@ function generatePassword() {
     var randomValue = characters[randomNumber]
     newPassword1.push(randomValue)
     var newPassword = newPassword1.join("")
-    //console.log(characters)
   };
   return newPassword
 
